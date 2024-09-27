@@ -8,7 +8,7 @@ import {
   faMoon,
 } from "@fortawesome/free-solid-svg-icons";
 import "./css/App.css";
-import ComponentWrapper from "./components/ComponentWrapper";
+import ComponentWrapper from "./ComponentWrapper";
 
 library.add(fab, faCloudMoon, faCloudMoonRain, faSun, faMoon);
 

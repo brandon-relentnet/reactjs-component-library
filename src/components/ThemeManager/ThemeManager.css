@@ -9,7 +9,6 @@
   color: var(--text);
   font-size: 2em;
   transition: all var(--transition-default); 
-  margin: 1rem;
 }
 .theme-button:hover {
   transform: scale(1.1);
