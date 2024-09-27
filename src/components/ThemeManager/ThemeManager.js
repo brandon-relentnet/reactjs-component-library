@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "../css/ThemeManager.css";
+import "./ThemeManager.css";
 const themes = ["mocha", "macchiato", "frappe", "latte"];
 const icons = {
   mocha: ["fas", "cloud-moon"],

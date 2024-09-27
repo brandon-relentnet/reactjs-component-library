@@ -1,23 +1,15 @@
 /* Variables */
 :root {
-    --transition-duration: .3s;
-    --transition-duration-extended: .6s;
-    --backwards: cubic-bezier(.68, -0.55, .27, 1.55);
-}
+  --transition-short: 0.1s;
+  --transition-default: 0.3s;
+  --transition-extended: 0.6s;
 
-/* Default: 0px border-radius */
-body.border-radius-0 {
-  --border-radius: 0px;
-}
+  --border-radius: 0.3rem;
 
-/* 6px border-radius */
-body.border-radius-6 {
-  --border-radius: 6px;
-}
-
-/* 12px border-radius */
-body.border-radius-18 {
-  --border-radius: 18px;
+  --material-shadow0: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+    rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  --material-shadow1: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 body.mocha {
@@ -50,7 +42,12 @@ body.mocha {
   --crust: #11111b;
 
   --color-block-overlay: rgba(0, 0, 0, 0.7);
-  --shadow-light: rgba(45, 35, 66, 0.4); /* Slightly darker shadow for the dark theme */
+  --shadow-light: rgba(
+    45,
+    35,
+    66,
+    0.4
+  ); /* Slightly darker shadow for the dark theme */
   --shadow-medium: rgba(45, 35, 66, 0.3);
   --shadow-inset: var(--surface2);
 }
@@ -84,7 +81,12 @@ body.latte {
   --crust: #dce0e8;
 
   --color-block-overlay: rgba(255, 255, 255, 0.5);
-  --shadow-light: rgba(120, 120, 130, 0.2); /* Lighter shadow for the bright theme */
+  --shadow-light: rgba(
+    120,
+    120,
+    130,
+    0.2
+  ); /* Lighter shadow for the bright theme */
   --shadow-medium: rgba(120, 120, 130, 0.15);
   --shadow-inset: var(--surface2);
 }
@@ -118,7 +120,12 @@ body.frappe {
   --crust: #232634;
 
   --color-block-overlay: rgba(0, 0, 0, 0.5);
-  --shadow-light: rgba(80, 80, 120, 0.3); /* Middle-ground shadow for a moderately dark theme */
+  --shadow-light: rgba(
+    80,
+    80,
+    120,
+    0.3
+  ); /* Middle-ground shadow for a moderately dark theme */
   --shadow-medium: rgba(80, 80, 120, 0.25);
   --shadow-inset: var(--surface2);
 }

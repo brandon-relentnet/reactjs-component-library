@@ -7,8 +7,8 @@ import {
   faSun,
   faMoon,
 } from "@fortawesome/free-solid-svg-icons";
-import ThemeManager from "./components/ThemeManager/ThemeManager";
-import "./components/css/App.css";
+import "./css/App.css";
+import ComponentWrapper from "./components/ComponentWrapper";
 
 library.add(fab, faCloudMoon, faCloudMoonRain, faSun, faMoon);
 
@@ -16,7 +16,7 @@ function App() {
   return (
     <div>
       <h1>My React Components</h1>
-      <ThemeManager />
+      <ComponentWrapper />
     </div>
   );
 }

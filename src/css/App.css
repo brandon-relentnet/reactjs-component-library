@@ -1,0 +1,68 @@
+@import "./variables.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+#root {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  background-color: var(--crust);
+  transition: all var(--transition-default) ease;
+  color: var(--text);
+}
+.react-components {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.react-component {
+  flex-basis: auto;
+  border: 3px solid var(--mantle);
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  transition: all var(--transition-default) ease;
+}
+.react-component:hover {
+  border-color: var(--base);
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.modal-content {
+  background: #fff;
+  padding: 1em;
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+}
+.modal-header {
+  font-size: 1.25em;
+  margin-bottom: 0.5em;
+}
+.modal-close {
+  position: absolute;
+  top: 0.5em;
+  right: 1em;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+.modal-body {
+  max-height: 70vh;
+  overflow-y: auto;
+}

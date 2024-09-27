@@ -1,7 +1,0 @@
-@import "./variables.css";
-
-body {
-  background-color: var(--mantle);
-  transition: background-color var(--transition-duration);
-  color: var(--text);
-}

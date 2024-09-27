@@ -1,0 +1,39 @@
+.nav-link {
+  color: var(--text);
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  transition: color var(--transition-default) ease;
+    margin: 0 1rem;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0;
+  left: 50%;
+  bottom: -3px;
+  transform: translateX(-50%);
+  background-color: var(--subtext0);
+  transition: width var(--transition-default) ease,
+    background-color var(--transition-default) ease;
+}
+.nav-link:hover::after {
+  width: 70%;
+}
+.nav-link.active-nav-link::after {
+  width: 110%;
+  background-color: var(--pink);
+}
+.nav-link.active-nav-link {
+  color: var(--pink) !important;
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--base);
+    width: 550px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--material-shadow0);
+}
