@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useCallback } from "react";
 import Dropdown from "../components/Dropdown/Dropdown";
 
 const Sorting = ({
@@ -15,7 +15,8 @@ const Sorting = ({
     { value: "custom_order", label: "Custom Order" },
   ];
 
-  const sortComponents = () => {
+  // Memoize the sortComponents function to avoid unnecessary re-creations
+  const sortComponents = useCallback(() => {
     const sortedList = [...components];
 
     switch (sortOption) {
@@ -52,11 +53,11 @@ const Sorting = ({
         break;
     }
     setSortedComponents(sortedList);
-  };
+  }, [components, sortOption, setSortedComponents]);
 
   useEffect(() => {
     sortComponents();
-  }, [sortOption, components]);
+  }, [sortComponents]);
 
   return (
     <div className="sorting-container">
