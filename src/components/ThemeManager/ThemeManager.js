@@ -13,7 +13,8 @@ const ThemeManager = () => {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "mocha");
 
   useEffect(() => {
-    document.body.className = theme;
+    document.body.classList.remove("mocha", "macchiato", "frappe", "latte");
+    document.body.classList.add(theme);
     localStorage.setItem("theme", theme);
   }, [theme]);
 

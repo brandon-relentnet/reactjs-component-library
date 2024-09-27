@@ -100,10 +100,8 @@ body {
   position: relative;
   max-width: 90%;
   max-height: 90%;
-  overflow: auto;
   border-radius: var(--border-radius);
   border: 3px solid var(--crust);
-  
 }
 .modal-header {
   font-size: 1.25em;
@@ -129,6 +127,9 @@ body {
 }
 .modal-body::-webkit-scrollbar {
   display: none;
+}
+.code-container pre {
+  border-radius: var(--border-radius) !important;
 }
 button.file-tab {
   background-color: var(--surface0);

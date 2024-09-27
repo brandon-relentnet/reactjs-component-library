@@ -6,11 +6,23 @@ import {
   faCloudMoonRain,
   faSun,
   faMoon,
+  faSquareFull,
+  faSquare,
+  faCircle,
 } from "@fortawesome/free-solid-svg-icons";
-import "./css/App.css";
+import "../css/App.css";
 import ComponentWrapper from "./ComponentWrapper";
 
-library.add(fab, faCloudMoon, faCloudMoonRain, faSun, faMoon);
+library.add(
+  fab,
+  faCloudMoon,
+  faCloudMoonRain,
+  faSun,
+  faMoon,
+  faSquareFull,
+  faSquare,
+  faCircle
+);
 
 function App() {
   return (

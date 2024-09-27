@@ -6,7 +6,10 @@ const Modal = ({ isOpen, onClose, title, children }) => {
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+      <div
+        className="modal-content"
+        onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
+      >
         {title && <div className="modal-header">{title}</div>}
         <button className="modal-close" onClick={onClose}>
           ×

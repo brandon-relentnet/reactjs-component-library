@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 
-const NavBar = React.memo(({ links }) => {
+const NavBarComponent = ({ links = [] }) => {
   return (
     <nav className="navbar">
       {links.map(({ to, label }, index) => (
@@ -19,13 +19,9 @@ const NavBar = React.memo(({ links }) => {
       ))}
     </nav>
   );
-});
-
-NavBar.defaultProps = {
-  links: [],
 };
 
-NavBar.propTypes = {
+NavBarComponent.propTypes = {
   links: PropTypes.arrayOf(
     PropTypes.shape({
       to: PropTypes.string.isRequired,
@@ -33,5 +29,8 @@ NavBar.propTypes = {
     })
   ).isRequired,
 };
+
+// Wrap the component with React.memo
+const NavBar = React.memo(NavBarComponent);
 
 export default NavBar;
