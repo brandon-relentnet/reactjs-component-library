@@ -13,25 +13,24 @@ body {
   color: var(--text);
 }
 .react-components {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center; /* Aligns the grid content in the center */
+  gap: 1.5rem; /* Optional, to add space between grid items */
 }
 .react-component {
-  flex-basis: auto;
   border: 3px solid var(--mantle);
-  margin: 1rem;
   padding: 2rem;
   border-radius: var(--border-radius);
   transition: all var(--transition-default) ease;
+  box-sizing: border-box; /* Ensures padding and borders are included in width calculations */
 }
 .react-component:hover {
   border-color: var(--surface0);
 }
 .component-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
 }
 .component-header h2 {
   color: var(--text);

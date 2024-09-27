@@ -36,4 +36,5 @@
     width: 550px;
     border-radius: var(--border-radius);
     box-shadow: var(--material-shadow0);
+    transition: all var(--transition-default) ease;
 }

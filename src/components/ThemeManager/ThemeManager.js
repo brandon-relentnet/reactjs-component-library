@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Button from "../Button/Button";
 import "./ThemeManager.css";
+
 const themes = ["mocha", "macchiato", "frappe", "latte"];
 const icons = {
   mocha: ["fas", "cloud-moon"],
@@ -13,8 +14,8 @@ const ThemeManager = () => {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "mocha");
 
   useEffect(() => {
-    document.body.classList.remove("mocha", "macchiato", "frappe", "latte");
-    document.body.classList.add(theme);
+    document.body.classList.remove(...themes);
+    document.body.classList.add(theme); // Fixed here
     localStorage.setItem("theme", theme);
   }, [theme]);
 
@@ -23,9 +24,12 @@ const ThemeManager = () => {
   };
 
   return (
-    <button onClick={handleClick} className="theme-button">
-      <FontAwesomeIcon icon={icons[theme]} />
-    </button>
+    <Button
+      icons={icons}
+      handleClick={handleClick}
+      type={theme} // Fixed here
+      arrayName="theme"
+    />
   );
 };
 
